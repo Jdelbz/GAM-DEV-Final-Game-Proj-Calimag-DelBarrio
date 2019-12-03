@@ -48,9 +48,9 @@ public class ViewHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(this.isUIActionsPermitted && Input.GetKeyDown(KeyCode.Escape)) {
-			this.OnBack ();
-		}
+		//if(this.isUIActionsPermitted && Input.GetKeyDown(KeyCode.Escape)) {
+		//	this.OnBack ();
+		//}
 	}
 		
 

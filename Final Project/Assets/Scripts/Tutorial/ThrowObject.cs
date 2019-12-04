@@ -8,14 +8,14 @@ public class ThrowObject : MonoBehaviour
     public float throwForce = 10;
     bool hasPlayer = false;
     bool beingCarried = false;
-    public AudioClip[] soundToPlay;
+   /* public AudioClip[] soundToPlay;
     private AudioSource audio;
-    public int dmg;
+    public int dmg;*/
     private bool touched = false;
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        /*audio = GetComponent<AudioSource>();*/
     }
 
     void Update()
@@ -50,7 +50,7 @@ public class ThrowObject : MonoBehaviour
                     transform.parent = null;
                     beingCarried = false;
                     GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce);
-                RandomAudio();
+                /*RandomAudio();*/
                 }
                 else if (Input.GetMouseButtonDown(1))
                 {
@@ -60,7 +60,7 @@ public class ThrowObject : MonoBehaviour
                 }
             }
         }
-    void RandomAudio()
+    /*void RandomAudio()
     {
         if (audio.isPlaying){
             return;
@@ -68,7 +68,7 @@ public class ThrowObject : MonoBehaviour
         audio.clip = soundToPlay[Random.Range(0, soundToPlay.Length)];
         audio.Play();
 
-    }
+    }*/
    void OnTriggerEnter()
     {
         if (beingCarried)

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class OptionMenuScript : View
 {
-	
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +19,10 @@ public class OptionMenuScript : View
     }
 	
 	public void returnMainMenuPressed(){
-		SceneManager.LoadScene("MainMenuScene");
-        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("MainMenuScene");
     }
 	
 	public void returnToGamePressed(){
-		ViewHandler.Instance.HideCurrentView();
-        Cursor.lockState = CursorLockMode.Locked;
+        ViewHandler.Instance.HideCurrentView();
     }
 }

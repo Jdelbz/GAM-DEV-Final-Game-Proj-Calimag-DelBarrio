@@ -20,9 +20,11 @@ public class OptionMenuScript : View
 	
 	public void returnMainMenuPressed(){
 		SceneManager.LoadScene("MainMenuScene");
-	}
+        Cursor.lockState = CursorLockMode.None;
+    }
 	
 	public void returnToGamePressed(){
 		ViewHandler.Instance.HideCurrentView();
-	}
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 }

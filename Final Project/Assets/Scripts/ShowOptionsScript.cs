@@ -20,11 +20,13 @@ public class ShowOptionsScript : MonoBehaviour
 				if(ViewHandler.Instance.GetActiveView() == null){ // special case if the no is clicked
 					ViewHandler.Instance.Show("OptionPanel");
 					menuOpen = true;
+                    Cursor.lockState = CursorLockMode.None;
 				}
 				else {
 				ViewHandler.Instance.HideCurrentView();
 				menuOpen = false;
-				}
+                Cursor.lockState = CursorLockMode.Locked;
+                }
 			}
 			else if(!menuOpen){
 				ViewHandler.Instance.Show("OptionPanel");

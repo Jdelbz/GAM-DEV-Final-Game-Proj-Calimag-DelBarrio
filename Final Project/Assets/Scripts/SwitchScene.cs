@@ -7,7 +7,23 @@ public class SwitchScene : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(3);
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Level1":
+                SceneManager.LoadScene("Level2");
+                break;
+
+            case "Level2":
+                SceneManager.LoadScene("Level3");
+                break;
+            case "Level3":
+                SceneManager.LoadScene("MainMenuScene");
+                break;
+
+        }
+
+       /* if (SceneManager.GetActiveScene().name == "Level2")
+            SceneManager.LoadScene(3);*/
     }
 
 }

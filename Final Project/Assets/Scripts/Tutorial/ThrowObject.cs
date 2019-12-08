@@ -21,7 +21,7 @@ public class ThrowObject : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(gameObject.transform.position, player.position);
-        if (dist <= 2.5f)
+        if (dist <= 4.0f)
         {
             hasPlayer = true;
         }

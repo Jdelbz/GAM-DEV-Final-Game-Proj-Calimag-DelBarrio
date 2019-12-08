@@ -5,6 +5,7 @@ public class ThrowObject : MonoBehaviour
 {
     public Transform player;
     public Transform playerCam;
+    public Transform theDest;
     public float throwForce = 10;
     bool hasPlayer = false;
     bool beingCarried = false;
@@ -21,7 +22,7 @@ public class ThrowObject : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(gameObject.transform.position, player.position);
-        if (dist <= 4.0f)
+        if (dist >= 1.0f)
         {
             hasPlayer = true;
         }
@@ -32,7 +33,7 @@ public class ThrowObject : MonoBehaviour
         if (hasPlayer && Input.GetButtonDown("Use"))
         {
             GetComponent<Rigidbody>().isKinematic = true;
-            transform.parent = playerCam;
+            transform.parent = theDest;
             beingCarried = true;
         }
         if (beingCarried)
@@ -49,7 +50,7 @@ public class ThrowObject : MonoBehaviour
                     GetComponent<Rigidbody>().isKinematic = false;
                     transform.parent = null;
                     beingCarried = false;
-                    GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce);
+                    GetComponent<Rigidbody>().AddForce(theDest.forward * throwForce);
                 /*RandomAudio();*/
                 }
                 else if (Input.GetMouseButtonDown(1))

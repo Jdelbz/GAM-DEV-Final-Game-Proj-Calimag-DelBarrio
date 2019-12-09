@@ -3,12 +3,12 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace DigitalRuby.PyroParticles
+/*namespace DigitalRuby.PyroParticles
 {
     [CustomEditor(typeof(DemoScript))]
     public class LightningBoltEditor : Editor
     {
-        private Texture2D logo;
+        *//*private Texture2D logo;
 
         public override void OnInspectorGUI()
         {
@@ -45,6 +45,6 @@ namespace DigitalRuby.PyroParticles
             }
 
             DrawDefaultInspector();
-        }
+        }*//*
     }
-}
+}*/

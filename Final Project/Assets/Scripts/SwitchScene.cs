@@ -7,7 +7,7 @@ public class SwitchScene : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        switch (SceneManager.GetActiveScene().name)
+        /*switch (SceneManager.GetActiveScene().name)
         {
             case "Level1":
                 SceneManager.LoadScene("Level2");
@@ -20,10 +20,11 @@ public class SwitchScene : MonoBehaviour
                 SceneManager.LoadScene("MainMenuScene");
                 break;
 
-        }
+        }*/
 
-       /* if (SceneManager.GetActiveScene().name == "Level2")
-            SceneManager.LoadScene(3);*/
+        /* if (SceneManager.GetActiveScene().name == "Level2")
+             SceneManager.LoadScene(3);*/
+        ViewHandler.Instance.Show("CongratulationsUIScreen");
     }
 
 }

@@ -21,12 +21,16 @@ public class ShowOptionsScript : MonoBehaviour
             if (ViewHandler.Instance.GetActiveView() == null)
             {
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 ViewHandler.Instance.Show("OptionPanel");
             }
             else
             {
+                Debug.Log("Banana");
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 ViewHandler.Instance.HideCurrentView();
+
                 // Cursor.lockState = CursorLockMode.None;
             }
         }

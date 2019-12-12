@@ -18,8 +18,8 @@ public class SplashScreenScript : View
                 lvlDesc.text = "Find your way out of the maze.\n\n W - Move Forward\nS - Move Backward\nA - Move Left\nD - Move Right";
                 break;
             case "Level2":
-                lvlName.text = "Level2";
-                lvlDesc.text = "LevelDesc";
+                lvlName.text = "Warehouse";
+                lvlDesc.text = "The wonders you can do with a magic box.\n\n W - Move Forward\nS - Move Backward\nA - Move Left\nD - Move Right\nLeft Mouse Button - Grab Object";
                 break;
             case "Level3":
                 lvlName.text = "Level3";

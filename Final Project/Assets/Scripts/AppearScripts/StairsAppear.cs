@@ -6,6 +6,7 @@ public class StairsAppear : MonoBehaviour
 {
     public GameObject Stairs;
     public bool active = true;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +19,12 @@ public class StairsAppear : MonoBehaviour
         if (active == true)
         {
             Stairs.SetActive(true);
+            
         }
         else
         {
             Stairs.SetActive(false);
+            
         }
     }
 

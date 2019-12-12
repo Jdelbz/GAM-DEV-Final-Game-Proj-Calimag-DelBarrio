@@ -2,24 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyStairs : MonoBehaviour
+public class SecondPuzzleScript : MonoBehaviour
 {
-    public GameObject Stairs;
-    public bool active = true;
+    public GameObject Fire;
+    public bool active;
     // Start is called before the first frame update
     void Start()
     {
-
+        active = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (active == false)
+        if (active == true)
         {
-            Stairs.SetActive(false);
+            
+            Fire.SetActive(true);
         }
-        
+        else
+        {
+            
+            Fire.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,10 +32,6 @@ public class DestroyStairs : MonoBehaviour
         if (other.tag == "Player")
         {
             active = false;
-        }
-        else if (other.tag == "BoxKey")
-        {
-            active = true;
         }
     }
 }

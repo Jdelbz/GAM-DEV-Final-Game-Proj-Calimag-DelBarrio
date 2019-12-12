@@ -2,35 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyStairs : MonoBehaviour
+public class SwitchDisappear : MonoBehaviour
 {
-    public GameObject Stairs;
-    public bool active = true;
+    public GameObject Switches;
+    public bool active = false;
     // Start is called before the first frame update
     void Start()
     {
-
+        active = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (active == false)
+        if (active == true)
         {
-            Stairs.SetActive(false);
+            Switches.SetActive(true);
         }
-        
+        else
+        {
+            Switches.SetActive(false);
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            active = false;
+            active = true;
         }
         else if (other.tag == "BoxKey")
         {
-            active = true;
+            active = false;
         }
     }
 }

@@ -10,6 +10,7 @@ public class CongratulationsUIScript : View
     // Start is called before the first frame update
     [SerializeField] private Button mainMenuBtn;
     [SerializeField] private Button nextLvlBtn;
+    [SerializeField] private AudioSource congratsAudio;
 
     void Start()
     {
@@ -17,6 +18,9 @@ public class CongratulationsUIScript : View
         if (SceneManager.GetActiveScene().name == "Level3") {
             nextLvlBtn.gameObject.SetActive(false);
         }
+
+
+        congratsAudio.Play();
     }
 
     // Update is called once per frame

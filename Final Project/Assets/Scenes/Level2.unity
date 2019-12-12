@@ -39505,6 +39505,10 @@ PrefabInstance:
       propertyPath: firstScreen
       value: LevelSplashPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 1443928596640326, guid: 3a7badae042359b4ea2f0576b6c975c9, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a7badae042359b4ea2f0576b6c975c9, type: 3}
 --- !u!1 &2114735098

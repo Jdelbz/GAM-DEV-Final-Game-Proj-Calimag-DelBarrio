@@ -22,8 +22,8 @@ public class SplashScreenScript : View
                 lvlDesc.text = "The wonders you can do with a magic box.\n\n W - Move Forward\nS - Move Backward\nA - Move Left\nD - Move Right\nLeft Mouse Button - Grab Object";
                 break;
             case "Level3":
-                lvlName.text = "Level3";
-                lvlDesc.text = "LevelDesc";
+                lvlName.text = "Tower";
+                lvlDesc.text = "Can you get to the top and out?\n\n W - Move Forward\nS - Move Backward\nA - Move Left\nD - Move Right\nLeft Mouse Button - Grab Object";
                 break;
         }
     }

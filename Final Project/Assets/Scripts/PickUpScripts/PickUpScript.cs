@@ -29,17 +29,13 @@ public class PickUpScript : MonoBehaviour
             item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             item.transform.SetParent(tempParent.transform);
 
-            if (Input.GetMouseButton(1))
-            {
-                item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
-                isHolding = false;
-            }
+           
         }
         else
         {
             objectPos = item.transform.position;
             item.transform.SetParent(null);
-            item.GetComponent<Rigidbody>().useGravity = true;
+            item.GetComponent<Rigidbody>().useGravity = false;
             item.transform.position = objectPos;
         }
     }
